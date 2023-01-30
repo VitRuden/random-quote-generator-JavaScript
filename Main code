@@ -1,0 +1,32 @@
+const quotes = [
+  {
+    quote: "Life is 10% what happens to us and 90% how we react to it.",
+    author: "Charles R. Swindoll"
+  },
+  {
+    quote: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+    author: "Winston S. Churchill"
+  },
+  {
+    quote: "Be yourself; everyone else is already taken.",
+    author: "Oscar Wilde"
+  },
+  {
+    quote: "Believe you can and you're halfway there.",
+    author: "Theodore Roosevelt"
+  },
+  {
+    quote: "Don't watch the clock; do what it does. Keep going.",
+    author: "Sam Levenson"
+  }
+];
+
+const btn = document.querySelector("#btn");
+const quote = document.querySelector("#quote");
+const author = document.querySelector("#author");
+
+btn.addEventListener("click", function() {
+  let random = Math.floor(Math.random() * quotes.length);
+  quote.innerHTML = `"${quotes[random].quote}"`;
+  author.innerHTML = `- ${quotes[random].author}`;
+});
